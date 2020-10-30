@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/demo/static/js/main.316f1583.chunk.js",
-    "main.js.map": "/demo/static/js/main.316f1583.chunk.js.map",
+    "main.js": "/demo/static/js/main.fd25e6e5.chunk.js",
+    "main.js.map": "/demo/static/js/main.fd25e6e5.chunk.js.map",
     "runtime-main.js": "/demo/static/js/runtime-main.43a555ef.js",
     "runtime-main.js.map": "/demo/static/js/runtime-main.43a555ef.js.map",
     "static/js/2.bf63c19d.chunk.js": "/demo/static/js/2.bf63c19d.chunk.js",
     "static/js/2.bf63c19d.chunk.js.map": "/demo/static/js/2.bf63c19d.chunk.js.map",
     "index.html": "/demo/index.html",
-    "precache-manifest.fbb6ba7cdd576419c39bb5cac4c9d681.js": "/demo/precache-manifest.fbb6ba7cdd576419c39bb5cac4c9d681.js",
+    "precache-manifest.a5c6495eda5921ec07764f141a1851b4.js": "/demo/precache-manifest.a5c6495eda5921ec07764f141a1851b4.js",
     "service-worker.js": "/demo/service-worker.js",
     "static/js/2.bf63c19d.chunk.js.LICENSE.txt": "/demo/static/js/2.bf63c19d.chunk.js.LICENSE.txt",
     "static/media/zbar.wasm.bin": "/demo/static/media/zbar.wasm.b946c8e6.bin"
@@ -15,6 +15,6 @@
   "entrypoints": [
     "static/js/runtime-main.43a555ef.js",
     "static/js/2.bf63c19d.chunk.js",
-    "static/js/main.316f1583.chunk.js"
+    "static/js/main.fd25e6e5.chunk.js"
   ]
 }

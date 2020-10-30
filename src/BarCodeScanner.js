@@ -137,6 +137,10 @@ const BarCodeScanner = () => {
       <>
         <video id="video" className="full"> </video> 
         <canvas id="canvas" className="full middle"></canvas> 
+        <div id="footer" class="full">
+            <div class="footerItem">AAA</div>
+            <div class="footerItem">BBB</div>
+        </div>
 	  </ >
 
     )
