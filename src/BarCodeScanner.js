@@ -1,19 +1,23 @@
-import React, { userRef } from 'react';
+import React from 'react';
 import { scanImageData } from 'zbar.wasm';
 
 const SCAN_PROID_MS = 800;
 
 const handleResize = () => {
+
     const width = document.documentElement.clientWidth;
     const height = document.documentElement.clientHeight;
+
     const video = document.getElementById('video');
 
     video.width = width;
     video.height = height;
 
     const canvas = document.getElementById('canvas');
+    
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
+
     if (width / video.videoWidth < height / video.videoHeight) {
         canvas.style.width = '100vw';
         canvas.style.height = 'auto';
@@ -33,10 +37,13 @@ const init = async() => {
             height: { max: 640 }
         }
     });
+    
     const video = document.getElementById('video');
+    
     video.srcObject = mediaStream;
-    video.setAttribute('playsinline', '');
+    video.setAttribute('playsinline',  null);
     video.play();
+
     await new Promise(r => {
         video.onloadedmetadata = r;
     });
@@ -44,11 +51,14 @@ const init = async() => {
 };
 
 const render = (symbols) => {
+    
     const canvas = document.getElementById('canvas');
     const footer = document.getElementById('footer');
+    
     const ctx = canvas.getContext('2d');
     const width = canvas.width;
     const height = canvas.height;
+
     ctx.clearRect(0, 0, width, height);
     while (footer.firstChild) {
         footer.removeChild(footer.lastChild);
@@ -83,10 +93,13 @@ const render = (symbols) => {
 const scan = async() => {
     const canvas = document.createElement('canvas');
     const video = document.getElementById('video');
+
     const width = video.videoWidth;
     const height = video.videoHeight;
+    
     canvas.width = width;
     canvas.height = height;
+    
     const ctx = canvas.getContext('2d');
     ctx.drawImage(video, 0, 0, width, height);
     const imgData = ctx.getImageData(0, 0, width, height);
@@ -105,12 +118,14 @@ const main = async() => {
             await sleep(SCAN_PROID_MS);
         }
     } catch (err) {
+
         const div = document.createElement('div');
         div.className = 'full middle';
         div.style = 'height: 72px; width: 100%; text-align: center; font-size: 36px';
         div.innerText = 'Cannot get cammera: ' + err;
         document.body.appendChild(div);
         console.error(err);
+
     }
 };
 
@@ -120,8 +135,8 @@ main();
 const BarCodeScanner = () => {
     return (
       <>
-        <video id="video" className="full" > </video> 
-        <canvas id = "canvas" className="full middle"></canvas> 
+        <video id="video" className="full"> </video> 
+        <canvas id="canvas" className="full middle"></canvas> 
 	  </ >
 
     )
