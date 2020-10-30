@@ -6,7 +6,7 @@ const SCAN_PROID_MS = 800;
 const handleResize = () => {
     const width = document.documentElement.clientWidth;
     const height = document.documentElement.clientHeight;
-    const video = userRef(null);
+    const video = document.getElementById('video');
 
     video.width = width;
     video.height = height;
